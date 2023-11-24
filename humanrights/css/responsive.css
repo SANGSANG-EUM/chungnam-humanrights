@@ -1,0 +1,291 @@
+@media screen and (max-width:1440px){
+  .transport-li {width: 100%;}
+}
+
+@media screen and (max-width:1290px){
+  /* header */
+  .header-ham {display: flex; align-items: center; position: relative; width: clamp(25px, 7vw, 40px); height: clamp(15px, 5vw, 30px);}
+  .header-ham > span {display: block; width: 100%; height: 3px; border-radius: 3px; background-color: #333; transition: .3s;}
+  .header-ham > span::after, .header-ham > span::before {content: ''; position: absolute; left: 0; width: 100%; height: 3px; border-radius: 3px; background-color: #333; transition: .3s;}
+  .header-ham > span::after {top: 0;}
+  .header-ham > span::before {bottom: 0;}
+  .header-ham.on > span {background-color: transparent;}
+  .header-ham.on > span::after {rotate: 45deg; top: 50%;}
+  .header-ham.on > span::before {rotate: -45deg; top: 50%;}
+  .header-top {position: fixed; top: 0; left: 0; width: 100vw; background-color: #fff; border-bottom: 1px solid #f5f5f5;}
+  .header-top-ul {display: none;}
+  .sitemap {display: block; position: fixed; top: 80px; left: auto; right: -100%; width: max(400px, 50vw); height: calc(100vh - 80px); border-radius: 0; transition: .5s;}
+  .sitemap.on {right: 0;}
+  .sitemap-ul {flex-direction: column; overflow-y: auto; height: calc(100vh - 140px);}
+
+  /* main */
+  .main-consult-wr {gap: 3vw;}
+  .main-consult-btn-wr {flex-direction: column; gap: 2vw;}
+  .main-consult-btn--1 {transform: translate(0);}
+  .main-consult-btn {display: flex; align-items: center; flex: auto; padding: 30px 50px; width: 300px; height: 19vw;}
+  .main-consult-btn--1 .main-colsult-img {width: 50%;}
+  .main-consult-btn--2 .main-colsult-img {width: 55%;}
+  .main-consult-txt {font-size: 1.25rem;}
+  .main-consult-txt b {font-size: 1.75rem;}
+  .main-consult-in--l {width: calc(100% - 300px);}
+  .main-consult-in--r {width: 300px;}
+  .main-colsult-video-wr {width: 100%; height: 40vw;}
+
+  /* 충청남도 인권센터 소개 */
+  .about-sec .about-info-ul::after {right: 0; width: 260px; height: 180px;}
+  .about-func-txt {font-size: 1rem;}
+  .about-charge-cnt {gap: 2px 20px;}
+  .about-process-ul {flex-direction: column;}
+  .about-process-li {width: 100%; border-top: 1px solid #666;}
+  .about-process-li:not(:last-child) {padding-right: 0; padding-bottom: 40px; border-top: 1px solid #666;}
+  .about-history-year {width: 180px; font-size: 3.5rem; flex-shrink: 0;}
+  .about-history-cnt-ul {width: calc(100% - 180px)}
+}
+
+@media screen and (max-width:1023px){
+  /* header */
+  .footer {padding: 25px 0; font-size: 0.875rem;}
+  .foot-wr {flex-direction: column-reverse;}
+  .foot-in {width: 100%;}
+  .foot-in-right {flex-direction: row; justify-content: space-between; padding-bottom: 15px;}
+  .foot-info, .foot-copyright {font-size: 0.875rem; line-height: 1.5;}
+  .foot-info:not(:last-child)::after {display: none;}
+  .foot-address {padding-bottom: 5px;}
+
+  /* main */
+  .main-consult-wr {flex-direction: column;}
+  .main-consult-in--l, .main-consult-in--r {width: 100%;}
+  .main-colsult-video-wr {height: 53vw;}
+  .main-consult-btn-wr {flex-direction: row;}
+  .main-consult-btn {padding: 3vw 6vw; height: 200px;}
+
+  .consult-target-ul {flex-direction: column;}
+
+  /* 충청남도 인권센터 소개 */
+  .about-sec .about-info-ul::after {z-index: -1; opacity: 0.3;}
+  .about-part-wr {flex-direction: column;}
+  .about-part-li {height: auto;}
+  .about-part-title {font-size: 1.125rem;}
+  .about-history-wr {height: 600px;}
+
+  /* sub common */
+  .sub-title-con {flex-direction: column; align-items: flex-start; gap: clamp(10px, 3vw, 30px) 0;}
+
+  .board-top {flex-direction: column-reverse; align-items: flex-start; justify-content: center; gap: 20px;}
+  .board-search-wr {width: 100%;}
+  .board-list-order-wr, .board-search-btn {flex-shrink: 0;}
+  .board-list-order {padding: 0 10px; width: 100px; background-position: center right;}
+  .board-search-form {width: 100%;}
+  .board-search {width: 100%;}
+  .board-search-input {width: calc(100% - 100px);}
+  .board-search-btn img {width: 16px;}
+
+  /* Board list */
+  .list-table .list-file,  .list-table .list-hits {display: none;}
+
+  /* Board view */
+  .view-top {flex-direction: column; gap: min(1vw, 10px);}
+  .view-subject {font-size: 1.125rem;}
+
+  /* Board gallery */
+  .gallery-ul {gap: max(20px, 4vw) 3vw;}
+  .gallery-li {width: calc(100% / 3 - 6vw / 3);}
+  .gallery-info {padding: 10px 0 0;}
+  .gallery-text {font-size: 0.875rem;}
+
+  /* 인권침해·상담 구제신청 LIST */
+  .application-download {padding: 3vw 5vw; width: auto; height: auto; font-size: 1.25rem; border-radius: 10px;}
+  .application-download img {width: 20px;}
+  .list-write-btn-wr {display: flex; justify-content: flex-end; margin: 15px 0;}
+  .list-write-btn {position: static; transform: translate(0);}
+}
+
+@media screen and (max-width:767px){
+  /* common */
+  .container {padding-top: 65px;}
+
+  /* header */
+  .header-top {height: 65px;}
+  .sitemap {top: 65px; height: calc(100vh - 65px);}
+  .sitemap-ul {height: calc(100vh - 120px);}
+
+  /* footer */
+  .foot-info-wr {flex-direction: column; gap: 0;}
+  .foot-logo {width: clamp(170px, 30vwm,  220px);}
+  .foot-rel-btn {padding: 0 10px; height: 35px; font-size: 0.875rem; line-height: 35px; background-position: center right 10px;}
+  .foot-rel-ul {padding: 5px 10px;}
+
+  /* main */
+  .main-slide--1, .main-slide--2 {background-size: 150%; background-position: bottom right 60%;}
+  .slide-ctr--main {right: auto; left: 3vw; bottom: 8vw; width: 170px; height: 40px;}
+  .main-slide-cnt-wr {margin-bottom: 8vw;}
+  .slide-btn--main.prev img, .slide-btn--main.next img {width: 12px;}
+  .slide-btn--main.pause img {width: 6px;}
+
+  .main-section-tit-wr {flex-direction: column;  align-items: flex-start;}
+  .main-section-tit {font-size: 1.8rem;}
+  .main-section-subtit {margin-bottom: 0;}
+
+  .slide-btn--news {width: 35px; height: 35px; border-radius: 7.5px;}
+  .main-news-tit {padding: 10px 0 2px; font-size: 1rem;}
+  .main-news-date {font-size: 0.875rem;}
+
+  .main-banner {flex-direction: column; align-items: center; text-align: center; border-radius: 10px;}
+  .main-banner-txt--2, .main-banner-tel {font-size: 1.5rem;}
+  .main-banner-in-right {flex-direction: column;}
+  .main-banner-in-right::before {margin: 1vw 0;}
+  
+  /* sub common */
+  .sub-top {padding: 0;}
+  .sub-visual {margin: 0; border-radius: 0;}
+  .sub-breadcrumb {padding-top: 10px;}
+  .sub-location {position: relative; z-index: 100;}
+  .sub-location-btn {display: block; width: 100%; height: 50px; font-size: 1rem; font-weight: 500; color: #666; border: 0; background: #fafafa url('../images/icon-board_select.png') no-repeat center right 3vw / 10px; text-align: left; padding: 0 3vw; border-bottom: 1px solid #f1f1f1;}
+  .sub-location-ul {display: none; position: absolute; top: 100%; left: 0; padding: 10px 3vw; gap: 10px; width: 100%; background-color: #fff; align-items: flex-start;}
+  .sub-location-li a {display: block; font-size: 1rem; text-align: left; padding: 5px 0; color: #666; font-weight: 400;}
+  .sub-location-li.active a {color: #ff5331; font-weight: 400;}
+  .sub-location-li.active a::after {display: none;}
+  .sub-title-info {font-size: 1rem;}
+  .sub-title-info br {display: none;}
+  
+  /* 충청남도 인권센터 소개 */
+  .about-info-ul {gap: 5px;}
+  .about-charge-cnt {flex-direction: column; align-items: flex-start;}
+  .about-history-li {flex-direction: column;}
+  .about-history-year {width: 100%; padding: 0 0 20px 0; font-size: 2.5rem;}
+  .about-history-cnt-ul {width: 100%; padding: 20px 0;}
+  .about-history-cnt-li span {display: block; margin-top: -0.5rem;}
+  .about-history-wr {height: 400px;}
+
+  /* 찾아오시는길 */
+  .transport-li {flex-direction: column; align-items: flex-start; gap: 10px;}
+  .transport-how {flex-direction: column;}
+  .transport-how span:not(:last-child)::after {display: none;}
+
+  /* 인권침해 상담·구제신청 진행절차 */
+  .about-info-li.half {width: 100%;}
+  .consult-target-txt {font-size: 1rem;}
+  .consult-method-ul {gap: 20px;}
+  .consult-method-li {flex-direction: column; align-items: flex-start; gap: 2.5px;}
+  .consult-method-type {font-size: 1.125rem;}
+  .consult-method-type::after {display: none;}
+
+  /* sub common */
+  .hr-select {padding: 0 10px; background-position: center right 10px; height: 40px;}
+  .hr-input {padding: 0 10px; height: 40px;}
+
+  /* Board top */
+  .board-search-wr {height: 40px;}
+  .board-search-select {padding: 0 10px; width: 100px;}
+  .board-search-btn {width: 40px;}
+  .board-search::after {left: 100px;}
+
+  /* Board list */
+  .list-table th, .list-table td {padding: 10px;}
+  .list-table td {font-size: 0.875rem;}
+  .list-table td.list-subject {font-size: 1rem;}
+  .list-table .list-num, .list-table .list-department {display: none;}
+
+  /* Board gallery */
+  .gallery-li {width: calc(100% / 2 - 3vw / 2);}
+  .gallery-thumb {height: clamp(100px, 25vw, 200px);}
+
+  /* Board view */
+  .view-delete {position: static; transform: translate(0); height: 50px;}
+  .viewEdit, .viewDel {width: calc(50% - 75px); max-width: 100px;}
+  .viewList {width: 150px; flex-shrink: 0;}
+
+  /* Borad page */
+  .board-page {width: 30px; height: 30px;}
+  .board-page-icon {width: 20px;}
+}
+
+@media screen and (max-width:480px){
+  html, body {font-size: 14px;}
+
+  /* common */
+  .container {padding-top: 50px;}
+
+  /* header */
+  .header-top {height: 50px;}
+  .sitemap {top: 50px; height: calc(100vh - 50px); width: 100%;}
+  .sitemap-ul {height: calc(100vh - 100px);}
+  .header-ham > span, .header-ham > span::after, .header-ham > span::before {height: 2px;}
+  .sitemap-dep2-ul {padding-top: 7.5px;}
+
+  /* main */
+  .main-slide-title-wr::after {left: -5px; bottom: -5px; height: 30px;}
+  .main-slide-txt br {display: none;}
+  .slide-ctr--main {position: static; width: 100%; height: 30px; border-radius: 0;}
+  .slide-ctr-wr--main {padding: 0;}
+  .main-slide-cnt-wr {margin-bottom: 0;}
+
+  .main-section-top {padding-bottom: 10px;}
+
+  .main-consult-btn {padding: 5vw; width: 100%; height: auto; border-radius: 10px;}
+  .main-consult-btn--1 .main-colsult-img, .main-consult-btn--2 .main-colsult-img {display: none;}
+  .main-consult-txt {font-size: 1rem; padding-bottom: 5px;}
+  .main-consult-txt b {font-size: 1.5rem;}
+
+  .slide-btn-wr--news {gap: 5px;}
+  .slide-btn-wr--news::after {right: -5px;}
+  .slide-ctr--news {gap: 10px;}
+  .slide-btn--news {width: 30px; height: 30px; border-radius: 5;}
+  .slide-btn--news img {height: 10px;}
+
+  /* sub common */
+  .sub-location-btn {height: 40px;}
+  .sub-breadcrumb {gap: 20px;}
+  .sub-breadcrumb > li {font-size: 0.875rem;}
+  .sub-breadcrumb > li:not(:last-child)::after {right: -11px; height: 10px;}
+  .sub-breadcrumb img {width: 13px;}
+  .sub-sec-title {font-size: 1.35rem;}
+
+  /* 충청남도 인권센터 소개 */
+  .about-sec .about-info-ul::after {width: 185px; height: 130px;}
+  .about-sec .about-info-li {text-align: center;}
+  .about-info-li span {display: block; margin: 0 0 5px 0; padding: 0 0 5px 0;}
+  .about-info-li span::after {width: 10px; height: 1px; right: auto; left: 50%; top: 100%; transform: translate(-50%, -50%);}
+  .about-process-box {padding: 30px 20px;}
+  .about-process-li {padding-top: 15px;}
+  .about-sec--4 {padding: 25px 0;}
+  .about-history-wr {height: 300px;}
+  .consult-img {overflow-x: auto;}
+  .consult-img img {width: 600px;  max-width: 500px;}
+  .consult-img-wr::after {content: '← 좌우로 드래그 하여 확인하세요. →'; display: block; text-align: center; padding-top: 5px; color: #999;}
+
+  /* 찾아오는길 */
+  .transport-type__img {width: 43px;}
+  .transport-type__img img {transform: scale(0.8);}
+
+  /* Board top */
+  .board-top {padding: 20px 0 10px;}
+  .board-search-select {width: 80px;}
+  .board-search-input {width: calc(100% - 80px);}
+  .board-search-form {gap: 3px;}
+
+  /* Board list */
+  .list-table td {padding: 10px 5px;}
+  .list-table td.list-writer {width: auto;}
+  .list-table .list-date {display: none;}
+  .list-lock-icon img {width: 9px;}
+
+  /* Board gallery */
+  .gallery-ul {padding-top: 0;}
+  .gallery-li {width: calc(100%);}
+  .gallery-thumb {height: clamp(100px, 50vw, 200px);}
+  .gallery-title {padding-bottom: 0;}
+  
+  /* Borad page */
+  .board-page-wr {gap: 3px; margin: 15px 0;}
+  .board-page {width: 6.5vw; height: 6.5vw;}
+  .board-page-icon {width: 20px;}
+
+  /* Board view */
+  .view-lock-icon img {width: 9px; margin-right: 5px;}
+  .hr-btn-wr {gap: 5px; margin-top: 15px;}
+  .view-file-li {gap: 10px;}
+  
+  /* 인권침해·상담 구제신청 LIST */
+  .application-download {font-size: 1rem;}
+}

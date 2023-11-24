@@ -19,13 +19,33 @@ button {border: 0; background: none;}
 .wrapper{width: calc(1280px + 6vw); max-width: 100%; margin: 0 auto; padding: 0 3vw;}
 
 /* font */
+.txt {font-size: 1rem; font-weight: 300; color: #666;}
 .jalnan {font-family: Jalnan;}
-
+.maincolor {color: #ff5331;}
+.fw-800 {font-weight: 800;}
+.fw-700 {font-weight: 700;}
+.fw-600 {font-weight: 600;}
+.fw-500 {font-weight: 500;}
+.fw-400 {font-weight: 400;}
+.fw-300 {font-weight: 300;}
+.fw-200 {font-weight: 200;}
 
 /* buttons */
+.hr-btn {display: flex; align-items: center; justify-content: center; border-radius: 5px;}
+.bg-gray {background-color: #999; color: #fff;}
+.bg-black {background-color: #333; color: #fff;}
+.bg-main {background-color: #ff5331; color: #fff;}
+.bg-white {background-color: #fff; color: #999; border: 1px solid #efefef;}
 
+/* width */
+.w-full {width: 100%;}
+.w-430 {width: min(100%, 430px);}
 
 /* input */
+.hr-input {padding: 0 20px; height: 50px; border-radius: 5px; background-color: #fafafa; border: 1px solid #efefef; font-size: 1rem; font-weight: 400; color: #666;}
+.hr-input::placeholder {color: #bbbbbb;}
+.hr-textarea {padding: 20px; height: 200px; resize: none; border-radius: 5px; background-color: #fafafa; border: 1px solid #efefef; font-size: 1rem; font-weight: 400; color: #666;}
+.hr-select {padding: 0 20px; height: 50px; background-color: #fff; border-radius: 5px; border: 1px solid #efefef; appearance: none; background: url('../images/icon-board_select.png') no-repeat center right 20px / 10px; font-size: 1rem; font-weight: 400; color: #666;}
 
 
 /* etc */
