@@ -114,6 +114,7 @@ $(document).ready(function () {
       slideLabelMessage: '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
     },
   });
+  
 
   // praction 커스텀
   $('.slide-page.current').text('01');
@@ -122,6 +123,10 @@ $(document).ready(function () {
     $('.slide-page.total').text(mainTot);
   } else {
     $('.slide-page.total').text(`0${mainTot}`);
+  }
+
+  if (mainTot = 1) {
+    $('.slide-ctr--main').css('display', 'none')
   }
 
 

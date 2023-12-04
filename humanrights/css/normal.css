@@ -57,6 +57,7 @@ html, body {scroll-behavior: smooth;}
 
 .main-slider {position: relative;}
 .main-slide {display: flex; align-items: center; position: relative; height: clamp(200px, 70vw, 400px);}
+.main-slide--0 {background: #ffe794 url('../images/img-mainvs_bg0.jpg') no-repeat center bottom / contain;}
 .main-slide--1 {background: #ffe794 url('../images/img-mainvs_bg1.jpg') no-repeat center bottom / contain;}
 .main-slide--2 {background: #ffe794 url('../images/img-mainvs_bg2.jpg') no-repeat center bottom / contain;}
 .main-slide-cnt-wr {width: min(100%, 520px);}
@@ -111,10 +112,13 @@ html, body {scroll-behavior: smooth;}
 .slide-btn--news img {height: 15px;}
 .slide-btn-wr--news .slide-btn {border: 1px solid #e3e3e3; background-color: #fff;}
 .slide-btn--news.link {border: 1px solid #ff5331; background-color: #ff5331;}
-.main-news-img {position: relative; height: 175px; border-radius: 30px 0 30px 0; overflow: hidden; box-shadow: 0 5px 10px 5px rgba(0, 0, 0, .1);}
-.main-news-img img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; object-fit: cover;}
-.main-news-tit {padding: 15px 0 5px; font-size: 1.125rem; font-weight: 500; color: #333; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
-.main-news-date {font-size: 1rem; font-weight: 500; color: #999;}
+.main-news-img {display: flex; flex-direction: column; justify-content: space-between; position: relative; height: 175px; padding: 20px 25px; border-radius: 30px 0 30px 0; overflow: hidden; box-shadow: 0 0 10px 3px rgba(0, 0, 0, .05); background-color: #fff;}
+.main-news-img::after {content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: calc(100% - 4px); height: calc(100% - 4px); border: 2px solid #ff5331; border-radius: 30px 0 30px 0; opacity: 0; transition: .2s;}
+.main-news-img::before {content: ''; position: absolute; right: 0; bottom: 0; width: 60px; height: 50px; border-radius: 30px 0 30px 0; background: #ff5331 url('../images/icon-mainsl_next.png') no-repeat center / 17px; opacity: 0; transition: .2s;}
+/* .main-news-img img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; object-fit: cover;} */
+.main-news-tit {padding: 0 0 10px; font-size: 1.125rem; font-weight: 500; color: #333; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.main-news-cnt {overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;  color: #666;}
+.main-news-date {font-size: 1rem; color: #bbb;}
 .main-news-none {display: flex; align-items: center; justify-content: center; width: 100%; height: clamp(100px, 10vw, 150px); border-radius: 20px; border: 1px solid #eee; color: #999;}
 .main-banner-wr {margin-top: clamp(40px, 7vw, 75px);}
 .main-banner {display: flex; align-items: flex-end; width: 100%; padding: clamp(15px, 4vw, 39px) clamp(30px, 6vw, 100px); color: #fff; background: url('../images/img-main_banner_bg.jpg') no-repeat center bottom / cover; border-radius: 100px;}
@@ -355,6 +359,9 @@ html, body {scroll-behavior: smooth;}
 .write-field > label {font-size: 1.25rem; color: #0f0f0f;}
 .write-field::after {content: ''; position: absolute; top: 50%; right: 0; transform: translateY(-50%); width: 1px; height: 18px; background-color: #cdcdcd;}
 .write-content {padding-left: 15px; width: calc(100% - 130px);}
+.input-wr--hp {display: flex; align-items: center;}
+.input-wr--hp .hr-input {width: calc(100% / 3 - 30px / 3); max-width: 300px;}
+.input-icon {display: block; width: 15px; text-align: center;}
 
 /* file */
 .file-wr {display: flex; gap: 0 20px; align-items: center; margin-top: 5px;}
@@ -374,7 +381,7 @@ html, body {scroll-behavior: smooth;}
 .application-download img {width: 33px;}
 .list-write-btn {display: flex; align-items: center; justify-content: center; gap: 7px; position: absolute; bottom: -31px; right: 0; transform: translateY(100%); width: 120px; height: 40px; background-color: #333; border-radius: 5px; color: #fff; font-weight: 400;}
 .list-write-btn img {width: 21px;}
-.list-table tr.complete td.list-reply {color: #ff5331;}
+.list-table td.complete {color: #ff5331;}
 
 /* 인권침해·상담 구제신청 VIEW */
 .hr-pop-wr {display: none;}
@@ -401,4 +408,5 @@ html, body {scroll-behavior: smooth;}
 .sitemap-li:hover .sitemap-li-link {border-color: #ff5331; color: #ff5331; background-image: url('../images/icon-head_link_over.png');}
 .sitemap-dep2-li > a:hover {color: #ff5331; font-weight: 600;}
 .main-consult-btn:hover .main-colsult-img {animation: btnImg infinite linear 1s;}
+.main-news-slide:hover .main-news-img::after, .main-news-slide:hover .main-news-img::before {opacity: 1;}
 }

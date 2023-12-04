@@ -84,18 +84,53 @@
                 </li>
                 <li class="write-li">
                   <div class="write-field">
-                    <label for="write4">비밀번호</label>
+                    <label for="passwd">SMS수신여부</label>
                   </div>
                   <div class="write-content">
-                    <input type="password" name="" id="write4" class="hr-input w-430" placeholder="비밀번호를 입력해 주세요.">
+                    <select name="sms_rcv_yn" id="sms_rcv_yn" class="hr-input hr-select w-430" title="SMS수신여부">
+                      <option value="Y" selected="selected">예</option>
+                      <option value="N">아니오</option>
+                    </select>
                   </div>
                 </li>
                 <li class="write-li">
                   <div class="write-field">
-                    <label for="">보안코드</label>
+                    <label for="hp_num1">핸드폰 번호</label>
                   </div>
                   <div class="write-content">
-                    보안코드가 들어갈 부분입니다.
+                    <!-- <label for="hp_num1" class="sound_only">핸드폰 번호 첫번째 자리 입력</label>
+                    <label for="hp_num2" class="sound_only">핸드폰 번호 두번째 자리 입력</label>
+                    <label for="hp_num3" class="sound_only">핸드폰 번호 마지막 자리 입력</label> -->
+                    <div class="input-wr input-wr--hp">
+                      <select name="hp_num1" id="hp_num1" class="hr-input hr-select" title="전화번호 첫번째자리">
+                        <option value="010" selected="selected">010</option>
+                        <option value="011">011</option>
+                        <option value="016">016</option>
+                        <option value="017">017</option>
+                        <option value="018">018</option>
+
+                      </select>
+                      <span class="input-icon">-</span>
+                      <input type="text" id="hp_num2" name="hp_num2" class="hr-input" value="7580" title="전화번호 가운데자리"
+                        maxlength="4">
+                      <span class="input-icon">-</span>
+                      <input type="text" id="hp_num3" name="hp_num3" class="hr-input" value="0039" title="전화번호 마지막자리"
+                        maxlength="4">
+                    </div>
+
+                  </div>
+                </li>
+                <li class="write-li">
+                  <div class="write-field">
+                    <label for="email">이메일</label>
+                  </div>
+                  <div class="write-content">
+                    <!-- <label for="email" class="sound_only">이메일 주소 첫번째 자리 입력</label> -->
+                    <div class="">
+                      <input type="text" id="email" name="email" class="hr-input" title="이메일을 입력란"
+                        value="adobest@naver.com">
+                    </div>
+
                   </div>
                 </li>
                 <li class="write-li">

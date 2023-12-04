@@ -127,7 +127,8 @@
   .main-section-subtit {margin-bottom: 0;}
 
   .slide-btn--news {width: 35px; height: 35px; border-radius: 7.5px;}
-  .main-news-tit {padding: 10px 0 2px; font-size: 1rem;}
+  .main-news-img {height: 155px;}
+  .main-news-tit {padding: 0 0 5px;}
   .main-news-date {font-size: 0.875rem;}
 
   .main-banner {flex-direction: column; align-items: center; text-align: center; border-radius: 10px;}
@@ -195,6 +196,9 @@
   .viewEdit, .viewDel {width: calc(50% - 75px); max-width: 100px;}
   .viewList {width: 150px; flex-shrink: 0;}
 
+  /* Board write */
+  .write-field > label {font-size: 1.125rem;}
+
   /* Borad page */
   .board-page {width: 30px; height: 30px;}
   .board-page-icon {width: 20px;}
@@ -232,6 +236,7 @@
   .slide-ctr--news {gap: 10px;}
   .slide-btn--news {width: 30px; height: 30px; border-radius: 5;}
   .slide-btn--news img {height: 10px;}
+  .main-news-img {height: 140px;}
 
   /* sub common */
   .sub-location-btn {height: 40px;}
@@ -285,6 +290,13 @@
   .view-lock-icon img {width: 9px; margin-right: 5px;}
   .hr-btn-wr {gap: 5px; margin-top: 15px;}
   .view-file-li {gap: 10px;}
+
+  /* Board write */
+  .write-li {flex-direction: column; gap: 5px;}
+  .write-field, .write-content {width: 100%;}
+  .write-field::after {display: none;}
+  .write-content {padding-left: 0;}
+  .write-field > label {font-size: 1rem;}
   
   /* 인권침해·상담 구제신청 LIST */
   .application-download {font-size: 1rem;}
